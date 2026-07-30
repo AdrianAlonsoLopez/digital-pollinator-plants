@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{%block body %}
+ <!-- Cabeza --------------------------------------------->
+    <header>
+        <div class="container">
+            <h1>🌸 Polinizadores Digitales</h1>
+            <p>Descubre la planta perfecta para tu jardín y ayuda a los polinizadores</p>
+        </div>
+    </header>
+
+    <!-- Main ------------------------------------------------->
+    <main>
+        <div class="container">
+            <!-- Introd -->
+            <section class="section">
+                <div class="welcome-content">
+                    <div class="emoji-large">🐝</div>
+                    <h2 class="welcome-title">¡Bienvenido a tu nuevo Jardín de Polinizadores!</h2>
+                    <p class="welcome-text">
+                        ¡En el siguiente espacio responde algunas preguntas para poder encontrar la planta ideal para ti!
+                    </p>
+                    <button id="startBtn" class="btn-primary">
+                        🌱 Comenzar Cuestionario
+                    </button>
+                </div>
+            </section>
+
+            <!-- Seccion de preguntas -->
+            <section id="questionsSection" class="section">
+                <div class="questions-header">
+                    <h3 class="questions-title">Cuestionario</h3>
+                    <div class="question-counter">
+                        <span id="questionCounter">Pregunta 5 de 5</span>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar  (Podria eliminarse si resulta inconveniente)-->
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar" style="width: 100%;"></div>
+                </div>
+                
+                <!--AQUI VA EL BACK END!!!!!! -->
+                <div id="questionsContainer" class="questions-container">
+                <!-- Se inyecta desde JS -->
+                </div>
+                
+                <!-- Adelante atras boton -->
+                <div class="nav-buttons">
+                    <button id="prevBtn" class="btn-secondary">
+                        ← Anterior
+                    </button>
+                    <button id="nextBtn" class="btn-success">Ver Resultado</button>
+                </div>
+            </section>
+
+            <!-- Resultados (Va conectado al back end despues) -->
+            <section id="resultsSection" class="section">
+                <div class="results-header">
+                    <div class="emoji-large">🌺</div>
+                    <h3 class="results-title">¡Tu Planta Polinizadora Ideal!</h3>
+                    <p class="results-subtitle">Basado en tus respuestas, esta es nuestra recomendación perfecta para ti:</p>
+                </div>
+                
+                <!--BACK END PART !!!!!!!!!!!!!!! -->
+                <div id="resultsContainer" class="results-container">
+                    <!-- Se inyecta desde JS -->
+                </div>
+                
+                <!-- Boton reinicio compartir (Un poco triviales, se pueden ignorar de momento)  -->
+                <div class="action-buttons">
+                    <button id="restartBtn" class="btn-primary">
+                        🔄 Hacer Otro Cuestionario
+                    </button>
+                    <button id="shareBtn" class="btn-success">
+                        📤 Compartir Resultado
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+{%endblock%}
