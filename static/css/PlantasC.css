@@ -1,0 +1,578 @@
+ 
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #A8D5BA;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Cabeza */
+        header {
+            background-color: #377E55;
+            color: white;
+            padding: 30px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            text-align: center;
+            color: #A8D5BA;
+            font-size: 1.1rem;
+        }
+
+        /* Parte importante (Main) */
+        main {
+            padding: 40px 0;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Div de bienvenida */
+        .welcome-content {
+            text-align: center;
+        }
+
+        .emoji-large {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .welcome-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #377E55;
+            margin-bottom: 20px;
+        }
+
+        .welcome-text {
+            color: #5C4033;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        /*Boton Star y Restart*/
+        .btn-primary {
+            background-color: #FFD166;
+            color: #5C4033;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 209, 102, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #f5c842;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 209, 102, 0.4);
+        }
+
+        /* Preguntas */
+        .questions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .questions-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #377E55;
+        }
+
+        .question-counter {
+            background-color: #A8D5BA;
+            color: #377E55;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        /* Barra de progreso */
+
+        .progress-container {
+            width: 100%;
+            background-color: #A8D5BA;
+            border-radius: 10px;
+            height: 12px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background-color: #377E55;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+            width: 20%;
+        }
+
+        /* Parte interna preguntas */
+        .questions-container {
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #5C4033;
+        }
+
+        .placeholder-content {
+            padding: 60px 20px;
+        }
+
+        .placeholder-content .emoji-large {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Botones de Navegacion Siguiente-Anterio */
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .btn-secondary {
+            background-color: #377E55;
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #0e6231;
+        }
+
+        .btn-secondary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-success {
+            background-color: #F4978E;
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background-color: #f07a6b;
+        }
+
+        /* Div Resultado */
+        .results-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .results-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #377E55;
+            margin-bottom: 20px;
+        }
+
+        .results-subtitle {
+            color: #5C4033;
+            font-size: 1.1rem;
+        }
+
+        .results-container {
+            min-height: 600px;
+            border: 3px dashed #A8D5BA;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #5C4033;
+            padding: 60px 20px;
+        }
+
+        .results-placeholder .emoji-large {
+            font-size: 4rem;
+            margin-bottom: 30px;
+        }
+
+        .results-placeholder h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .results-placeholder p {
+            margin-bottom: 10px;
+        }
+
+        .results-placeholder .small-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .resultado-imagen {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Botonoes finales */
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #5C4033;
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .footer-emojis {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            letter-spacing: 10px;
+        }
+
+        .footer-text {
+            color: #A8D5BA;
+            margin-bottom: 10px;
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /*Parte de la recoleccion de datos*/
+        .btn-option {
+            display: inline-block;
+            margin: 8px;
+            padding: 10px 15px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn-option:hover {
+            background-color: #e0e0e0;
+        }
+        .text-input {
+            padding: 8px;
+            font-size: 1rem;
+            width: 80%;
+            max-width: 300px;
+            margin-top: 10px;
+        }
+        .question-box {
+    background-color: #f0fdf4;
+    border: 2px solid #c8e6c9;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.question-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.opciones-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-option {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #81c784;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-option:hover {
+    background-color: #66bb6a;
+}
+
+.text-input {
+    padding: 10px;
+    width: 80%;
+    font-size: 1.1rem;
+    border: 2px solid #a5d6a7;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dropdown-select {
+    padding: 10px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid #a5d6a7;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+        /* ADAPTABILIDAD A TELEFONO Y TABLET ------------------*/
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .section {
+                padding: 30px 20px;
+            }
+
+            .welcome-title {
+                font-size: 1.5rem;
+            }
+
+            .welcome-text {
+                font-size: 1rem;
+            }
+
+            .btn-primary {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+
+            .questions-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+            }
+
+            .nav-buttons button {
+                width: 100%;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-buttons button {
+                width: 100%;
+            }
+
+            .results-title {
+                font-size: 1.8rem;
+            }
+
+            .results-container {
+                min-height: 400px;
+                padding: 40px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            main {
+                padding: 20px 0;
+            }
+
+            .section {
+                margin-bottom: 20px;
+            }
+
+            .emoji-large {
+                font-size: 3rem;
+            }
+        }
+
+        /* =========================
+   MEJORAS RESPONSIVE MÓVIL
+   (Agregar al final de PlantasC.css)
+   ========================= */
+
+/* Evitar zoom raro en iOS y respetar tamaños de texto */
+html { -webkit-text-size-adjust: 100%; }
+
+/* Respetar zonas seguras en móviles con notch */
+body {
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+  padding-bottom: max(0px, env(safe-area-inset-bottom));
+}
+
+/* Inputs y selects a ancho completo en móvil */
+.text-input,
+.dropdown-select,
+select {
+  width: 100%;
+  max-width: 100%;
+  height: 44px; /* tamaño táctil mínimo */
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+/* Botones de opción adaptables (sí/no, selects simulados) */
+.btn-option {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 14px 16px;
+  min-height: 44px; /* tamaño táctil */
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Los botones de navegación y acción ocupan ancho completo en móvil */
+@media (max-width: 768px) {
+  .nav-buttons { gap: 12px; }
+  .nav-buttons button,
+  .action-buttons button {
+    width: 100%;
+    min-height: 46px;
+  }
+}
+
+/* Títulos y textos con tamaños fluidos para evitar cortes */
+header h1 { font-size: clamp(1.6rem, 5.2vw, 2.5rem); }
+.welcome-title { font-size: clamp(1.3rem, 4.5vw, 2rem); }
+.questions-title { font-size: clamp(1.2rem, 4.2vw, 1.8rem); }
+.results-title { font-size: clamp(1.4rem, 4.8vw, 2.2rem); }
+.welcome-text,
+.results-subtitle { font-size: clamp(0.95rem, 3.6vw, 1.1rem); }
+
+/* Evitar desbordes en preguntas largas */
+.questions-container h4,
+.welcome-text,
+.results-subtitle,
+.results-placeholder p {
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
+}
+
+/* Contenedores más compactos en móvil */
+@media (max-width: 768px) {
+  .section { padding: 22px 16px; }
+  .questions-header { gap: 10px; }
+  .questions-container {
+    min-height: 260px; /* menos alto en móvil para evitar scroll extra */
+    padding: 8px 0;
+  }
+  .placeholder-content { padding: 32px 12px; }
+  .progress-container { height: 10px; }
+  .question-counter { padding: 8px 14px; }
+  main { padding: 22px 0; }
+}
+
+/* Aún más compacto en pantallas muy pequeñas */
+@media (max-width: 420px) {
+  .container { padding: 0 12px; }
+  .section { margin-bottom: 16px; }
+  .emoji-large { font-size: 2.4rem; }
+  .results-container {
+    min-height: unset;
+    padding: 24px 12px;
+  }
+  .footer-emojis { font-size: 1.6rem; }
+  .footer-text { font-size: 0.95rem; }
+}
+
+/* Imagen del resultado: asegurar que nunca desborde */
+.resultado-imagen {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estados de foco visibles (accesibilidad) */
+.text-input:focus,
+.dropdown-select:focus,
+select:focus,
+.btn-option:focus,
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-success:focus {
+  outline: 3px solid #FFD166;
+  outline-offset: 2px;
+}
+
+/* Animaciones más suaves si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
