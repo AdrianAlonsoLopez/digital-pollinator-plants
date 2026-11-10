@@ -1,0 +1,7 @@
+Versión acumulativa: observaciones 1, 2 y 3 del revisor 1.
+Requiere: pip install pandas flask
+Estructura Flask: app.py, Arbol.py, BDPoli.csv en raíz; PlantaHTML.html en templates/; PlantasJ.js en static/js/.
+Ejecutar pruebas: python pruebas_revisor1_observacion3.py
+Resultado local: 11 pruebas correctas, comparadas contra CSV crudo.
+No se probó integración Flask/navegador: Flask no está instalado en este entorno.
+Las reglas ambientales son las existentes; no representan validación ecológica.

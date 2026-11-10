@@ -1,0 +1,20 @@
+test_01_una_especie (__main__.Pruebas.test_01_una_especie) ... ok
+test_02_varias_especies (__main__.Pruebas.test_02_varias_especies) ... ok
+test_03_ninguna_especie (__main__.Pruebas.test_03_ninguna_especie) ... ok
+test_04_preferencias_no_eliminan_compatibles (__main__.Pruebas.test_04_preferencias_no_eliminan_compatibles) ... ok
+test_05_ph_opcional (__main__.Pruebas.test_05_ph_opcional) ... ok
+test_06_entrada_ausente (__main__.Pruebas.test_06_entrada_ausente) ... ok
+test_07_entrada_no_numerica (__main__.Pruebas.test_07_entrada_no_numerica) ... ok
+test_08_fuera_de_rango (__main__.Pruebas.test_08_fuera_de_rango) ... ok
+test_09_no_json (__main__.Pruebas.test_09_no_json) ... ok
+test_10_nan (__main__.Pruebas.test_10_nan) ... ok
+test_11_casos_adicionales_contra_csv (__main__.Pruebas.test_11_casos_adicionales_contra_csv) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.072s
+
+OK
+BASE CSV: 138 especies
+CASO una entradas= {'estado': 1, 'amin': 0.85, 'temp': 17.5, 'heladas': 1, 'riego': 2, 'sol': 1, 'suelo': 1, 'CMO': 3, 'phCond': 2, 'forma': 1, 'fruta': 2, 'hoja': 1, 'uso': 2, 'cflor': 0, 'altura': 1, 'velocidad': 2} esperadas= ['Acaciella angustissima']
+CASO varias entradas= {'estado': 15, 'amin': 0.4, 'temp': 20.0, 'heladas': 2, 'riego': 2, 'sol': 1, 'suelo': 2, 'CMO': 2, 'phCond': 2, 'forma': 1, 'fruta': 2, 'hoja': 1, 'uso': 2, 'cflor': 0, 'altura': 1, 'velocidad': 2} esperadas= ['Agastache mexicana', 'Cuphea aequipetala']
+CASO ninguna entradas= {'estado': 16, 'amin': 1000000, 'temp': 20, 'heladas': 2, 'riego': 2, 'sol': 1, 'suelo': 2, 'CMO': 2, 'phCond': 2, 'forma': 1, 'fruta': 2, 'hoja': 1, 'uso': 2, 'cflor': 0, 'altura': 1, 'velocidad': 2} esperadas= []
